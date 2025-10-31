@@ -32,6 +32,12 @@
 					<router-link :to="'/update/' + dept.numero" class="btn btn-info">
 						Edit
 					</router-link>
+					<button
+						v-on:click="deleteDepartamento(dept.numero)"
+						class="btn btn-danger"
+					>
+						Delete
+					</button>
 				</tr>
 			</tbody>
 		</table>
@@ -50,10 +56,20 @@
 			};
 		},
 		mounted() {
-			service.getDepartamentos().then((result) => {
-				this.departamentos = result;
-				this.status = true;
-			});
+			this.getDepartamentos();
+		},
+		methods: {
+			deleteDepartamento(id) {
+				service.deleteDepartamento(id).then(() => {
+					this.getDepartamentos();
+				});
+			},
+			getDepartamentos() {
+				service.getDepartamentos().then((result) => {
+					this.departamentos = result;
+					this.status = true;
+				});
+			},
 		},
 	};
 </script>

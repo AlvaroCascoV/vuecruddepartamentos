@@ -1,7 +1,8 @@
 <template>
 	<MenuComponent />
-	<div style="width: 50%; margin: auto"></div>
-	<router-view />
+	<div style="width: 50%; margin: auto">
+		<router-view />
+	</div>
 </template>
 
 <script>
@@ -20,7 +21,6 @@
 		font-family: Avenir, Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
 		color: #2c3e50;
 	}
 </style>

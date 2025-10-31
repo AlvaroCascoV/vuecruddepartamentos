@@ -23,7 +23,7 @@
 						</router-link>
 					</li>
 					<li class="nav-item">
-						<router-link class="nav-link" to="/algo">Algo</router-link>
+						<router-link class="nav-link" to="/create">Create</router-link>
 					</li>
 					<li class="nav-item">
 						<router-link class="nav-link" to="/algo2">algo2</router-link>

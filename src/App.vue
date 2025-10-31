@@ -1,6 +1,6 @@
 <template>
 	<MenuComponent />
-	<div style="width: 50%; margin: auto">
+	<div style="width: 75%; margin: auto">
 		<router-view />
 	</div>
 </template>

@@ -25,9 +25,6 @@
 					<li class="nav-item">
 						<router-link class="nav-link" to="/create">Create</router-link>
 					</li>
-					<li class="nav-item">
-						<router-link class="nav-link" to="/algo2">algo2</router-link>
-					</li>
 					<!-- <li class="nav-item dropdown">
 						<a
 							class="nav-link dropdown-toggle"
@@ -56,20 +53,7 @@
 	</nav>
 </template>
 <script>
-	// import ServiceDepartamentos from "@/services/ServiceDepartamentos";
-
-	// let service = new ServiceDepartamentos();
 	export default {
 		name: "MenuComponent",
-		// data() {
-		// 	return {
-		// 		departamentos: [],
-		// 	};
-		// },
-		// mounted() {
-		// 	service.getDepartamentos().then((result) => {
-		// 		this.departamentos = result;
-		// 	});
-		// },
 	};
 </script>

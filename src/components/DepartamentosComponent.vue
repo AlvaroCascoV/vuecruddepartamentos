@@ -8,6 +8,7 @@
 					<th>ID</th>
 					<th>Nombre</th>
 					<th>Localidad</th>
+					<th>Accion</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -15,6 +16,22 @@
 					<td>{{ dept.numero }}</td>
 					<td>{{ dept.nombre }}</td>
 					<td>{{ dept.localidad }}</td>
+					<router-link
+						:to="
+							'/details/' +
+							dept.numero +
+							'/' +
+							dept.nombre +
+							'/' +
+							dept.localidad
+						"
+						class="btn btn-warning"
+					>
+						Details
+					</router-link>
+					<router-link :to="'/update/' + dept.numero" class="btn btn-info">
+						Edit
+					</router-link>
 				</tr>
 			</tbody>
 		</table>

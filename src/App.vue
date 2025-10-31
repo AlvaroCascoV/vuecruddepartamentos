@@ -1,5 +1,6 @@
 <template>
 	<MenuComponent />
+	<div style="width: 50%; margin: auto"></div>
 	<router-view />
 </template>
 

@@ -1,7 +1,9 @@
 <template>
 	<nav class="navbar navbar-expand-sm navbar-light bg-light">
 		<div class="container-fluid">
-			<router-link class="navbar-brand" to="/">Navbar</router-link>
+			<router-link class="navbar-brand" to="/">
+				<img src="./../assets/logo.png" width="45px" />
+			</router-link>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -21,9 +23,6 @@
 						</router-link>
 					</li>
 					<li class="nav-item">
-						<router-link class="nav-link" to="/coches">Coches</router-link>
-					</li>
-					<li class="nav-item">
 						<router-link class="nav-link" to="/algo">Algo</router-link>
 					</li>
 					<li class="nav-item">
@@ -38,15 +37,15 @@
 							data-bs-toggle="dropdown"
 							aria-expanded="false"
 						>
-							Oficios
+							Departamentos
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li v-for="job in oficios" :key="job">
+							<li v-for="dept in departamentos" :key="dept">
 								<router-link
 									class="dropdown-item"
-									:to="'/empleadosoficios/' + job"
+									:to="'/departamentos/' + dept.numero"
 								>
-									{{ job }}
+									{{ dept.nombre }}
 								</router-link>
 							</li>
 						</ul>
@@ -57,7 +56,20 @@
 	</nav>
 </template>
 <script>
+	// import ServiceDepartamentos from "@/services/ServiceDepartamentos";
+
+	// let service = new ServiceDepartamentos();
 	export default {
 		name: "MenuComponent",
+		// data() {
+		// 	return {
+		// 		departamentos: [],
+		// 	};
+		// },
+		// mounted() {
+		// 	service.getDepartamentos().then((result) => {
+		// 		this.departamentos = result;
+		// 	});
+		// },
 	};
 </script>

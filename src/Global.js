@@ -1,4 +1,4 @@
 var Global = {
-    urlDepartamentos: "https://apicruddepartamentoscore.azurewebsites.net/"
+    urlApiDepartamentos: "https://apicruddepartamentoscore.azurewebsites.net/"
 }
 export default Global

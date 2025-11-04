@@ -16,28 +16,27 @@
 					<td>{{ dept.numero }}</td>
 					<td>{{ dept.nombre }}</td>
 					<td>{{ dept.localidad }}</td>
-					<router-link
-						:to="
-							'/details/' +
-							dept.numero +
-							'/' +
-							dept.nombre +
-							'/' +
-							dept.localidad
-						"
-						class="btn btn-warning"
-					>
-						Details
-					</router-link>
-					<router-link :to="'/update/' + dept.numero" class="btn btn-info">
-						Edit
-					</router-link>
-					<button
-						v-on:click="deleteDepartamento(dept.numero)"
-						class="btn btn-danger"
-					>
-						Delete
-					</button>
+					<td>
+						<router-link
+							:to="
+								'/details/' +
+								dept.numero +
+								'/' +
+								dept.nombre +
+								'/' +
+								dept.localidad
+							"
+							class="btn btn-warning"
+						>
+							Details
+						</router-link>
+						<router-link :to="'/update/' + dept.numero" class="btn btn-info">
+							Edit
+						</router-link>
+						<router-link :to="'/delete/' + dept.numero" class="btn btn-danger">
+							Delete
+						</router-link>
+					</td>
 				</tr>
 			</tbody>
 		</table>
@@ -59,11 +58,6 @@
 			this.getDepartamentos();
 		},
 		methods: {
-			deleteDepartamento(id) {
-				service.deleteDepartamento(id).then(() => {
-					this.getDepartamentos();
-				});
-			},
 			getDepartamentos() {
 				service.getDepartamentos().then((result) => {
 					this.departamentos = result;
